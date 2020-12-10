@@ -1,2 +1,43 @@
-<p>student works!</p>
+<!-- <p>student works!</p>
 {{ hello2 }}
+<button (click)="onClick()">click me</button>
+<input type="text" [(ngModel)]="testv" />
+<b>{{ testv }}</b> -->
+<link
+  rel="stylesheet"
+  href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+  crossorigin="anonymous"
+/>
+
+<style>
+  #inner {
+    display: table;
+    margin: 0 auto;
+  }
+</style>
+<div style="text-align: center" id="inner">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>name</th>
+        <th scope="col">lastname</th>
+        <th scope="col">email</th>
+        <th scope="col">birthdate</th>
+        <th scope="col">action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let etudiant of students; index as i">
+        <th scope="row">{{ i + 1 }}</th>
+        <td>
+          {{ etudiant.name }}
+        </td>
+        <td>{{ etudiant.lastname }}</td>
+        <td>{{ etudiant.email }}</td>
+        <td>{{ etudiant.birthdate }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

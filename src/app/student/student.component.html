@@ -53,7 +53,12 @@
             <td>{{ etudiant.email }}</td>
             <td>{{ etudiant.birthdate }}</td>
             <td>
-              <button type="button" class="btn btn-primary">Primary</button
+              <button
+                type="button"
+                class="btn btn-primary"
+                (click)="getStudenttoUpdate(etudiant.id)"
+              >
+                Primary</button
               >&nbsp;
               <button
                 type="button"

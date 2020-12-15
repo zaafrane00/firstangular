@@ -1,6 +1,7 @@
 import { Router, ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { StudentService } from './../services/student-service.service';
+import { Student } from '../student';
 
 @Component({
   selector: '[app-student]',
@@ -9,6 +10,7 @@ import { StudentService } from './../services/student-service.service';
 })
 export class StudentComponent implements OnInit {
   students: any;
+  studentToUpdate: any;
   constructor(public studentservice: StudentService, private route: Router) {
     this.students = [];
   }
@@ -28,10 +30,20 @@ export class StudentComponent implements OnInit {
 
   delete(id: BigInteger) {
     this.studentservice.deleteStudent(id);
+    this.studentservice.getListStudent().subscribe((res) => {
+      console.log(res);
+      this.students = res;
+    });
     this.route.navigate(['']);
     this.studentservice.getListStudent().subscribe((res) => {
       console.log(res);
       this.students = res;
+    });
+  }
+
+  getStudenttoUpdate(id: BigInteger, student: Student) {
+    this.studentservice.getStudent(id).subscribe((res) => {
+      this.studentToUpdate = res;
     });
   }
 }

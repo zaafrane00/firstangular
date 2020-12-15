@@ -6,8 +6,8 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./son.component.css'],
 })
 export class SonComponent implements OnInit {
-  @Input() order: string = '';
-  @Input() ville: string = '';
+  // @Input() order: string = '';
+  // @Input() ville: string = '';
   constructor() {}
 
   ngOnInit(): void {}

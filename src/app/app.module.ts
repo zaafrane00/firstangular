@@ -9,6 +9,8 @@ import { FormsModule } from '@angular/forms';
 import { FatherComponent } from './father/father.component';
 import { SonComponent } from './father/son/son.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AddStudentComponent } from './add-student/add-student.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -17,15 +19,17 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     AboutComponent,
     StudentComponent,
     FatherComponent,
-    SonComponent
+    SonComponent,
+    AddStudentComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

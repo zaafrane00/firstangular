@@ -6,10 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./father.component.css'],
 })
 export class FatherComponent implements OnInit {
-  tab: Array<string> = ['premoer', 'duxieme', 'troisieme'];
-  nord = 'lille';
-  sud = 'marseille';
-  capitale = 'paris';
+  // tab: Array<string> = ['premoer', 'duxieme', 'troisieme'];
+  // nord = 'lille';
+  // sud = 'marseille';
+  // capitale = 'paris';
 
   constructor() {}
 

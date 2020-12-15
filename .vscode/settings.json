@@ -1,3 +1,12 @@
 {
-    "god.tsconfig": "./tsconfig.spec.json"
+  "god.tsconfig": "./tsconfig.spec.json",
+  "files.exclude": {
+    "node_modules": true,
+    "e2e": true,
+    "src/index.html": true,
+    "src/environments": true,
+    "src/app/father/": true,
+    "src/app/new-component/": true,
+    "src/app/about/": true
+  }
 }

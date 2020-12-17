@@ -9,7 +9,7 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
   styleUrls: ['./add-student.component.css'],
 })
 export class AddStudentComponent implements OnInit {
-  student = new Student(0, '', '', '', '');
+  student: any;
 
   constructor(public studentservice: StudentService, private router: Router) {}
   submitcreate() {

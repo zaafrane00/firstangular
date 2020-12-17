@@ -1,9 +1,7 @@
 export class Student {
-  constructor(
-    public id: number,
-    public name: string,
-    public lastname: string,
-    public email: string,
-    public birthdate: string
-  ) {}
+  id: number = 0;
+  name: string = '';
+  lastname: string = '';
+  email: string = '';
+  birthdate: string = '';
 }

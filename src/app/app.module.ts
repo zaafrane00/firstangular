@@ -11,6 +11,7 @@ import { SonComponent } from './father/son/son.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AddStudentComponent } from './add-student/add-student.component';
 import { HttpClientModule } from '@angular/common/http';
+import { UpdateStudentComponent } from './update-student/update-student.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { HttpClientModule } from '@angular/common/http';
     FatherComponent,
     SonComponent,
     AddStudentComponent,
+    UpdateStudentComponent,
   ],
   imports: [
     BrowserModule,

@@ -24,7 +24,7 @@ export class StudentService {
     );
   }
 
-  getStudent(id: BigInteger): Observable<Student> {
+  getStudent(id: number): Observable<Student> {
     return this.http.get<Student>(this.base_path + '/' + id);
   }
 
@@ -32,9 +32,9 @@ export class StudentService {
     return this.http.get<Student>(this.base_path);
   }
 
-  updateStudent(id: BigInteger, student: Student): Observable<Student> {
+  updateStudent(id: number, student: Student): Observable<Student> {
     return this.http.put<Student>(
-      this.base_path + '/',
+      this.base_path + '/' + id,
       JSON.stringify(student),
       this.httpOptions
     );

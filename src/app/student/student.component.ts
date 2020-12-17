@@ -41,9 +41,7 @@ export class StudentComponent implements OnInit {
     });
   }
 
-  getStudenttoUpdate(id: BigInteger, student: Student) {
-    this.studentservice.getStudent(id).subscribe((res) => {
-      this.studentToUpdate = res;
-    });
+  getStudenttoUpdate(id: BigInteger) {
+    this.route.navigate(['/update/' + id]);
   }
 }
